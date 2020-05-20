@@ -37,7 +37,7 @@ public class LambdaHandler implements RequestHandler<ScheduledEvent, Void> {
       if (null != twitterService) {
         List<String> tweetIds = null;
         try {
-          tweetIds = twitterService.getTweets(SEARCH_STRING != null ? SEARCH_STRING : "(from:@CNN OR from:@BBCWorld) lang:en \"breaking news\" -is:retweet", getTime());
+          tweetIds = twitterService.getTweets(SEARCH_STRING != null ? SEARCH_STRING : "(from:@realdonaldtrump)", getTime());
         } catch (Exception e) {
           System.out.println(e.getLocalizedMessage());
         }
